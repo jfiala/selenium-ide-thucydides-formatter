@@ -22,36 +22,36 @@ import com.example.steps.Documentation;
 @RunWith(ThucydidesRunner.class)
 public class Suite {
 
-@Managed(uniqueSession=false)
-protected WebDriver driver;
+	@Managed(uniqueSession=false)
+	protected WebDriver driver;
 
-@ManagedPages
-public Pages pages;
+	@ManagedPages
+	public Pages pages;
+	
+	private WebDriverBackedSelenium selenium;
 
-private WebDriverBackedSelenium selenium;
+	@Steps
+	Search search;
 
-		@Steps
-		Search search;
+	@Steps
+	Download download;
 
-		@Steps
-		Download download;
+	@Steps
+	Documentation documentation;
 
-		@Steps
-		Documentation documentation;
-
-		@Before
-		public void setUp() throws Exception {
+	@Before
+	public void setUp() throws Exception {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-			selenium = new WebDriverBackedSelenium(driver, pages.getDefaultBaseUrl());
-			search.setSelenium(selenium);
-			download.setSelenium(selenium);
-			documentation.setSelenium(selenium);
-		}
-		@Test
-		@Title("Suite")
-		public void test() throws Exception {
-			search.stepSearch();
-			download.stepDownload();
-			documentation.stepDocumentation();
-		}
+		selenium = new WebDriverBackedSelenium(driver, pages.getDefaultBaseUrl());
+		search.setSelenium(selenium);
+		download.setSelenium(selenium);
+		documentation.setSelenium(selenium);
 	}
+	@Test
+	@Title("Suite")
+	public void test() throws Exception {
+		search.stepSearch();
+		download.stepDownload();
+		documentation.stepDocumentation();
+	}
+}
