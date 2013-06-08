@@ -5,8 +5,8 @@ This is a Firefox plugin that adds Thucydides formatters to [Selenium IDE][1] so
 
 ## Description
 The mapping of Selenium Testcases to Thucydides is:
-Testcase = Thucydides Step, 
-Suite = Thucydides Test
+* Testcase = Thucydides Step, 
+* Suite = Thucydides Test
 
 This allows Thucydides to provide screenshots for each step.
 
