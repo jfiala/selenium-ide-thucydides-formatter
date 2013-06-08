@@ -1,0 +1,823 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Home</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/core.css"/>
+    <link rel="stylesheet" type="text/css" href="jqplot/jquery.jqplot.min.css"/>
+
+    <!--[if IE]>
+    <script language="javascript" type="text/javascript" src="jit/Extras/excanvas.js"></script><![endif]-->
+
+    <script type="text/javascript" src="scripts/jquery.js"></script>
+    <script type="text/javascript" src="datatables/media/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="jqplot/jquery.jqplot.min.js"></script>
+    <script type="text/javascript" src="jqplot/plugins/jqplot.categoryAxisRenderer.min.js"></script>
+    <script type="text/javascript" src="jqplot/plugins/jqplot.dragable.min.js"></script>
+    <script type="text/javascript" src="jqplot/plugins/jqplot.highlighter.min.js"></script>
+    <script type="text/javascript" src="jqplot/plugins/jqplot.dateAxisRenderer.min.js"></script>
+   	<script type="text/javascript" src="jqplot/plugins/jqplot.cursor.min.js"></script>
+
+
+
+    <link type="text/css" href="jqueryui/css/start/jquery-ui-1.8.18.custom.css" rel="Stylesheet" />
+    <script type="text/javascript" src="jqueryui/js/jquery-ui-1.8.18.custom.min.js"></script>
+
+    <script class="code" type="text/javascript">$(document).ready(function () {
+
+        var specified = [];
+        var done = [];
+        var skipped = [];
+        var failing = [];
+        var min_date;
+
+                var date = new Date(2013, 4, 12,12, 56, 20);
+
+        specified.push([date, 89]);
+        done.push([date,44]);
+        skipped.push([date,45]);
+        failing.push([date,0]);
+
+            min_date = date;
+
+
+        var date = new Date(2013, 4, 12,12, 58, 51);
+
+        specified.push([date, 0]);
+        done.push([date,0]);
+        skipped.push([date,0]);
+        failing.push([date,0]);
+
+
+
+        var date = new Date(2013, 4, 12,13, 0, 3);
+
+        specified.push([date, 0]);
+        done.push([date,0]);
+        skipped.push([date,0]);
+        failing.push([date,0]);
+
+
+
+        var date = new Date(2013, 4, 12,13, 1, 42);
+
+        specified.push([date, 0]);
+        done.push([date,0]);
+        skipped.push([date,0]);
+        failing.push([date,0]);
+
+
+
+        var date = new Date(2013, 4, 12,15, 23, 57);
+
+        specified.push([date, 0]);
+        done.push([date,0]);
+        skipped.push([date,0]);
+        failing.push([date,0]);
+
+
+
+        var date = new Date(2013, 4, 12,15, 25, 10);
+
+        specified.push([date, 0]);
+        done.push([date,0]);
+        skipped.push([date,0]);
+        failing.push([date,0]);
+
+
+
+        var date = new Date(2013, 4, 12,15, 35, 23);
+
+        specified.push([date, 2]);
+        done.push([date,2]);
+        skipped.push([date,0]);
+        failing.push([date,0]);
+
+
+
+        var date = new Date(2013, 4, 12,15, 56, 39);
+
+        specified.push([date, 2]);
+        done.push([date,2]);
+        skipped.push([date,0]);
+        failing.push([date,0]);
+
+
+
+        var date = new Date(2013, 4, 12,16, 46, 57);
+
+        specified.push([date, 2]);
+        done.push([date,2]);
+        skipped.push([date,0]);
+        failing.push([date,0]);
+
+
+
+        var date = new Date(2013, 4, 12,17, 39, 15);
+
+        specified.push([date, 0]);
+        done.push([date,0]);
+        skipped.push([date,0]);
+        failing.push([date,0]);
+
+
+
+        var date = new Date(2013, 4, 12,17, 41, 30);
+
+        specified.push([date, 20]);
+        done.push([date,5]);
+        skipped.push([date,15]);
+        failing.push([date,0]);
+
+
+
+        var date = new Date(2013, 4, 12,17, 42, 25);
+
+        specified.push([date, 20]);
+        done.push([date,5]);
+        skipped.push([date,15]);
+        failing.push([date,0]);
+
+
+
+        var date = new Date(2013, 4, 12,17, 43, 33);
+
+        specified.push([date, 20]);
+        done.push([date,5]);
+        skipped.push([date,15]);
+        failing.push([date,0]);
+
+
+
+        var date = new Date(2013, 4, 12,18, 23, 1);
+
+        specified.push([date, 22]);
+        done.push([date,7]);
+        skipped.push([date,15]);
+        failing.push([date,0]);
+
+
+
+        var date = new Date(2013, 4, 12,18, 28, 41);
+
+        specified.push([date, 2]);
+        done.push([date,2]);
+        skipped.push([date,0]);
+        failing.push([date,0]);
+
+
+
+        var date = new Date(2013, 4, 12,18, 30, 4);
+
+        specified.push([date, 20]);
+        done.push([date,5]);
+        skipped.push([date,15]);
+        failing.push([date,0]);
+
+
+
+        var date = new Date(2013, 4, 12,18, 39, 17);
+
+        specified.push([date, 22]);
+        done.push([date,7]);
+        skipped.push([date,15]);
+        failing.push([date,0]);
+
+
+
+        var date = new Date(2013, 4, 12,18, 45, 39);
+
+        specified.push([date, 23]);
+        done.push([date,8]);
+        skipped.push([date,15]);
+        failing.push([date,0]);
+
+
+
+        var date = new Date(2013, 4, 12,18, 47, 17);
+
+        specified.push([date, 23]);
+        done.push([date,8]);
+        skipped.push([date,15]);
+        failing.push([date,0]);
+
+
+
+        var date = new Date(2013, 4, 13,11, 36, 10);
+
+        specified.push([date, 28]);
+        done.push([date,13]);
+        skipped.push([date,15]);
+        failing.push([date,0]);
+
+
+
+        var date = new Date(2013, 4, 13,11, 38, 5);
+
+        specified.push([date, 28]);
+        done.push([date,13]);
+        skipped.push([date,15]);
+        failing.push([date,0]);
+
+
+
+        var date = new Date(2013, 4, 13,11, 40, 9);
+
+        specified.push([date, 28]);
+        done.push([date,13]);
+        skipped.push([date,15]);
+        failing.push([date,0]);
+
+
+
+        var date = new Date(2013, 4, 13,11, 45, 59);
+
+        specified.push([date, 40]);
+        done.push([date,10]);
+        skipped.push([date,30]);
+        failing.push([date,0]);
+
+
+
+        var date = new Date(2013, 4, 13,11, 47, 24);
+
+        specified.push([date, 40]);
+        done.push([date,10]);
+        skipped.push([date,30]);
+        failing.push([date,0]);
+
+
+
+        var date = new Date(2013, 4, 13,11, 49, 32);
+
+        specified.push([date, 20]);
+        done.push([date,5]);
+        skipped.push([date,15]);
+        failing.push([date,0]);
+
+
+
+        var date = new Date(2013, 4, 13,11, 52, 48);
+
+        specified.push([date, 20]);
+        done.push([date,5]);
+        skipped.push([date,15]);
+        failing.push([date,0]);
+
+
+
+        var date = new Date(2013, 4, 13,12, 1, 10);
+
+        specified.push([date, 23]);
+        done.push([date,8]);
+        skipped.push([date,15]);
+        failing.push([date,0]);
+
+
+
+        var date = new Date(2013, 4, 13,12, 3, 25);
+
+        specified.push([date, 26]);
+        done.push([date,8]);
+        skipped.push([date,18]);
+        failing.push([date,0]);
+
+
+
+        var date = new Date(2013, 4, 13,12, 5, 26);
+
+        specified.push([date, 28]);
+        done.push([date,13]);
+        skipped.push([date,15]);
+        failing.push([date,0]);
+
+
+
+        var date = new Date(2013, 4, 13,12, 12, 29);
+
+        specified.push([date, 28]);
+        done.push([date,13]);
+        skipped.push([date,15]);
+        failing.push([date,0]);
+
+
+
+        var date = new Date(2013, 4, 13,12, 16, 46);
+
+        specified.push([date, 28]);
+        done.push([date,13]);
+        skipped.push([date,15]);
+        failing.push([date,0]);
+
+
+
+        var date = new Date(2013, 4, 13,12, 18, 0);
+
+        specified.push([date, 28]);
+        done.push([date,13]);
+        skipped.push([date,15]);
+        failing.push([date,0]);
+
+
+
+        var date = new Date(2013, 4, 13,12, 19, 2);
+
+        specified.push([date, 28]);
+        done.push([date,13]);
+        skipped.push([date,15]);
+        failing.push([date,0]);
+
+
+
+        var date = new Date(2013, 4, 13,12, 20, 45);
+
+        specified.push([date, 28]);
+        done.push([date,13]);
+        skipped.push([date,15]);
+        failing.push([date,0]);
+
+
+
+        var date = new Date(2013, 4, 13,12, 28, 29);
+
+        specified.push([date, 28]);
+        done.push([date,13]);
+        skipped.push([date,15]);
+        failing.push([date,0]);
+
+
+
+        var date = new Date(2013, 4, 13,12, 34, 36);
+
+        specified.push([date, 28]);
+        done.push([date,13]);
+        skipped.push([date,15]);
+        failing.push([date,0]);
+
+
+
+        var date = new Date(2013, 4, 13,15, 54, 54);
+
+        specified.push([date, 0]);
+        done.push([date,0]);
+        skipped.push([date,0]);
+        failing.push([date,0]);
+
+
+
+        var date = new Date(2013, 4, 13,16, 25, 17);
+
+        specified.push([date, 4]);
+        done.push([date,2]);
+        skipped.push([date,0]);
+        failing.push([date,2]);
+
+
+
+        var date = new Date(2013, 4, 13,16, 27, 10);
+
+        specified.push([date, 4]);
+        done.push([date,4]);
+        skipped.push([date,0]);
+        failing.push([date,0]);
+
+
+
+        var date = new Date(2013, 4, 13,16, 40, 21);
+
+        specified.push([date, 7]);
+        done.push([date,7]);
+        skipped.push([date,0]);
+        failing.push([date,0]);
+
+
+
+        var date = new Date(2013, 4, 13,16, 41, 36);
+
+        specified.push([date, 7]);
+        done.push([date,7]);
+        skipped.push([date,0]);
+        failing.push([date,0]);
+
+
+
+        var date = new Date(2013, 4, 13,16, 54, 40);
+
+        specified.push([date, 10]);
+        done.push([date,10]);
+        skipped.push([date,0]);
+        failing.push([date,0]);
+
+
+
+        var date = new Date(2013, 4, 13,16, 58, 56);
+
+        specified.push([date, 10]);
+        done.push([date,10]);
+        skipped.push([date,0]);
+        failing.push([date,0]);
+
+
+
+        var date = new Date(2013, 4, 13,17, 0, 52);
+
+        specified.push([date, 10]);
+        done.push([date,10]);
+        skipped.push([date,0]);
+        failing.push([date,0]);
+
+
+
+        var date = new Date(2013, 4, 13,18, 24, 17);
+
+        specified.push([date, 16]);
+        done.push([date,16]);
+        skipped.push([date,0]);
+        failing.push([date,0]);
+
+
+
+        var date = new Date(2013, 4, 13,18, 26, 23);
+
+        specified.push([date, 22]);
+        done.push([date,22]);
+        skipped.push([date,0]);
+        failing.push([date,0]);
+
+
+
+        var date = new Date(2013, 4, 13,18, 56, 52);
+
+        specified.push([date, 0]);
+        done.push([date,0]);
+        skipped.push([date,0]);
+        failing.push([date,0]);
+
+
+
+        var date = new Date(2013, 4, 13,18, 58, 51);
+
+        specified.push([date, 0]);
+        done.push([date,0]);
+        skipped.push([date,0]);
+        failing.push([date,0]);
+
+
+
+        var date = new Date(2013, 4, 13,19, 3, 43);
+
+        specified.push([date, 0]);
+        done.push([date,0]);
+        skipped.push([date,0]);
+        failing.push([date,0]);
+
+
+
+        var date = new Date(2013, 4, 13,19, 6, 10);
+
+        specified.push([date, 0]);
+        done.push([date,0]);
+        skipped.push([date,0]);
+        failing.push([date,0]);
+
+
+
+        var date = new Date(2013, 4, 13,19, 7, 2);
+
+        specified.push([date, 0]);
+        done.push([date,0]);
+        skipped.push([date,0]);
+        failing.push([date,0]);
+
+
+
+        var date = new Date(2013, 4, 13,19, 15, 46);
+
+        specified.push([date, 6]);
+        done.push([date,6]);
+        skipped.push([date,0]);
+        failing.push([date,0]);
+
+
+
+        var date = new Date(2013, 4, 13,19, 20, 24);
+
+        specified.push([date, 28]);
+        done.push([date,28]);
+        skipped.push([date,0]);
+        failing.push([date,0]);
+
+
+
+        var date = new Date(2013, 4, 13,19, 45, 21);
+
+        specified.push([date, 6]);
+        done.push([date,6]);
+        skipped.push([date,0]);
+        failing.push([date,0]);
+
+
+
+        var date = new Date(2013, 4, 13,19, 51, 59);
+
+        specified.push([date, 6]);
+        done.push([date,6]);
+        skipped.push([date,0]);
+        failing.push([date,0]);
+
+
+
+        var date = new Date(2013, 4, 13,20, 7, 58);
+
+        specified.push([date, 6]);
+        done.push([date,6]);
+        skipped.push([date,0]);
+        failing.push([date,0]);
+
+
+
+        var date = new Date(2013, 4, 13,20, 13, 33);
+
+        specified.push([date, 28]);
+        done.push([date,28]);
+        skipped.push([date,0]);
+        failing.push([date,0]);
+
+
+
+        var date = new Date(2013, 4, 13,20, 17, 6);
+
+        specified.push([date, 28]);
+        done.push([date,28]);
+        skipped.push([date,0]);
+        failing.push([date,0]);
+
+
+
+        var date = new Date(2013, 4, 13,20, 37, 58);
+
+        specified.push([date, 25]);
+        done.push([date,25]);
+        skipped.push([date,0]);
+        failing.push([date,0]);
+
+
+
+        var date = new Date(2013, 4, 13,20, 42, 52);
+
+        specified.push([date, 28]);
+        done.push([date,28]);
+        skipped.push([date,0]);
+        failing.push([date,0]);
+
+
+
+        var date = new Date(2013, 4, 14,10, 27, 7);
+
+        specified.push([date, 29]);
+        done.push([date,29]);
+        skipped.push([date,0]);
+        failing.push([date,0]);
+
+
+
+        var date = new Date(2013, 4, 14,10, 48, 41);
+
+        specified.push([date, 29]);
+        done.push([date,29]);
+        skipped.push([date,0]);
+        failing.push([date,0]);
+
+
+
+        var date = new Date(2013, 4, 28,18, 23, 51);
+
+        specified.push([date, 2]);
+        done.push([date,2]);
+        skipped.push([date,0]);
+        failing.push([date,0]);
+
+
+
+        var date = new Date(2013, 4, 28,18, 26, 26);
+
+        specified.push([date, 11]);
+        done.push([date,2]);
+        skipped.push([date,9]);
+        failing.push([date,0]);
+
+
+
+        var date = new Date(2013, 4, 28,18, 30, 21);
+
+        specified.push([date, 11]);
+        done.push([date,4]);
+        skipped.push([date,0]);
+        failing.push([date,7]);
+
+
+
+        var date = new Date(2013, 5, 8,18, 54, 28);
+
+        specified.push([date, 0]);
+        done.push([date,0]);
+        skipped.push([date,0]);
+        failing.push([date,0]);
+
+
+
+        var date = new Date(2013, 5, 8,18, 55, 49);
+
+        specified.push([date, 1]);
+        done.push([date,1]);
+        skipped.push([date,0]);
+        failing.push([date,0]);
+
+
+
+        var date = new Date(2013, 5, 8,21, 49, 38);
+
+        specified.push([date, 0]);
+        done.push([date,0]);
+        skipped.push([date,0]);
+        failing.push([date,0]);
+
+
+
+        var date = new Date(2013, 5, 8,21, 50, 46);
+
+        specified.push([date, 3]);
+        done.push([date,0]);
+        skipped.push([date,3]);
+        failing.push([date,0]);
+
+
+
+        var date = new Date(2013, 5, 8,21, 51, 21);
+
+        specified.push([date, 3]);
+        done.push([date,3]);
+        skipped.push([date,0]);
+        failing.push([date,0]);
+
+
+
+
+        targetPlot = $.jqplot('chart_div', [failing,skipped,done,specified], {
+
+            axesDefaults : {
+                labelRenderer : $.jqplot.CanvasAxisLabelRenderer
+            },
+
+            axes : {
+
+                xaxis : {
+                    renderer : $.jqplot.DateAxisRenderer,
+                    tickOptions: {formatString:'%b %#d'},
+                    min : min_date,
+                    tickInterval: '1 week'
+                },
+
+                yaxis : {
+                    min: 0,
+                    max: 89,
+                    tickInterval: 89 / 5,
+                    tickOptions: {formatString: '%d' }
+                }
+
+            },
+
+            legend: {
+                show:true,
+                location: 'nw'
+            },
+
+			cursor:{
+					show: true,
+					zoom:true,
+					showTooltip:true
+    		},
+
+            series: [
+                {color:'#ff0000', label:'Failing'},
+   				{color:'#ff9131', label:'Skipped'},
+                {color:'#00ff00', label:'Done'},
+                {color:'#0000ff', label:'Specified'}
+
+            ]
+
+
+        });
+
+        controllerPlot = $.jqplot('controller_div', [failing,skipped,done,specified], {
+
+            seriesDefaults:{ showMarker: false },
+
+            series: [
+                {color:'#ff0000', label:'Failing'},
+				{color:'#ff9131', label:'Skipped'},
+				{color:'#00ff00', label:'Done'},
+				{color:'#0000ff', label:'Specified'}
+            ],
+
+            cursor:{
+                show: true,
+                showTooltip: false,
+                zoom:true,
+                constrainZoomTo: 'x'
+            },
+
+            axesDefaults: {
+                useSeriesColor:true,
+                rendererOptions: {
+                    alignTicks: true
+                }
+            },
+
+            axes : {
+
+                xaxis : {
+                    renderer : $.jqplot.DateAxisRenderer,
+                    tickOptions: {formatString:'%b %#d'},
+                    min : min_date,
+                    tickInterval: '1 week'
+                },
+
+                yaxis : {
+				show:false,
+                    min: 0,
+                    max: 89,
+                    tickInterval: 89 / 5,
+                    tickOptions: {formatString: '%d' }
+                }
+            } //axes
+        }); //conroller plot
+
+        $.jqplot.Cursor.zoomProxy(targetPlot, controllerPlot);
+
+        $.jqplot._noToImageButton = true;
+
+    });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/logo.jpg" border="0"/></a></div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="leftbg"></div>
+        <div class="middlebg">
+            <span class="bluetext"><a href="index.html" class="bluetext">Home</a> > History</span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+    <div class="menu">
+        <ul>
+            <li><a href="index.html">Test Results</a></li>
+            <li><a href="capabilities.html">Requirements</a></li>
+            <li><a href="progress-report.html">Progress</a></li>
+                <li><a href="3d2871ef9911e9892794a9042e262e6b82ae98dff337dd2d2e4d80be2072e38e.html">Stories</a></li>
+            <li><a href="history.html" class="current">History</a></li>
+        </ul>
+        <br style="clear:left"/>
+    </div>
+
+    <div class="clr"></div>
+    <div id="beforetable"></div>
+    <div id="results-dashboard">
+        <div class="middlb">
+            <div class="table">
+                 <table class='overview'>
+                  <tr>
+                     <td>
+                       <div id='chart_div' style='width: 700px; height: 400px;'></div>
+                     </td>
+                  <tr>
+                  <tr>
+                     <td>
+                       <div id='controller_div' style='width: 700px; height: 100px;'></div>
+                     </td>
+                  <tr>
+
+
+                 </table>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter"></div>
+
+</body>
+</html>
