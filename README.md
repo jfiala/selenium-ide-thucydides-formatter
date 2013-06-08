@@ -1,7 +1,7 @@
 
-# Thucydides Step Formatter for Selenium IDE [1]
+# [Thucydides][2] Step Formatter for [Selenium IDE][1]
 
-This is a Firefox plugin that adds Thucydides formatters to [Selenium IDE][1] so that tests can be exported as [Thucydides Selenium][2] test cases..
+This is a Firefox plugin that adds Thucydides formatters to [Selenium IDE][1] so that tests can be exported as [Thucydides][2] Selenium test cases..
 
 ## Description
 The mapping of Selenium Testcases to Thucydides is:
