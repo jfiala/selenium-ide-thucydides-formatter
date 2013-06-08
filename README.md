@@ -9,6 +9,7 @@ The mapping of Selenium Testcases to Thucydides is:
 * Suite = Thucydides Test
 
 This allows Thucydides to provide screenshots for each step.
+To see how the Thucydides report looks like, see the [sample report][3] provided.
 
 ## Installation
 1. Run build.bat.
@@ -16,3 +17,4 @@ This allows Thucydides to provide screenshots for each step.
 
 [1]:http://seleniumhq.org/projects/ide/
 [2]:http://www.thucydides.info/
+[3]:https://github.com/jfiala/selenium-ide-thucydides-formatter/blob/master/sample/thucydides-report/thucydides-report.zip
