@@ -194,53 +194,53 @@ function formatSuite(testSuite, filename) {
     	+ "@RunWith(ThucydidesRunner.class)\n"
     	+ "public class " + suiteClass + " {\n"
         + "\n"
-        + "@Managed(uniqueSession=false)\n"
-        + "protected WebDriver driver;\n"
+        + indents(1) + "@Managed(uniqueSession=false)\n"
+        + indents(1) + "protected WebDriver driver;\n"
         + "\n"
-        + "@ManagedPages\n"
-        + "public Pages pages;\n"
-        + "\n"
-        + "private WebDriverBackedSelenium selenium;\n"
+        + indents(1) + "@ManagedPages\n"
+        + indents(1) + "public Pages pages;\n"
+        + indents(1) + "\n"
+        + indents(1) + "private WebDriverBackedSelenium selenium;\n"
         + "\n";
     
     for (var i = 0; i < testSuite.tests.length; ++i) {
         var testClass = testSuite.tests[i].getTitle();
         var testClassVariable = testClass.toLowerCase();
         
-        formattedSuite += indents(2) + "@Steps\n";
-        formattedSuite += indents(2) + testClass + " " + testClassVariable + ";\n";
+        formattedSuite += indents(1) + "@Steps\n";
+        formattedSuite += indents(1) + testClass + " " + testClassVariable + ";\n";
         formattedSuite += "\n";
     }
     
-    formattedSuite += indents(2) +"@Before\n" 
-    	+ indents(2) +"public void setUp() throws Exception {\n"
+    formattedSuite += indents(1) +"@Before\n" 
+    	+ indents(1) +"public void setUp() throws Exception {\n"
     	+ indents(2) +"driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);\n"
     	
-    	+ indents(3) +"selenium = new WebDriverBackedSelenium(driver, pages.getDefaultBaseUrl());\n";
+    	+ indents(2) +"selenium = new WebDriverBackedSelenium(driver, pages.getDefaultBaseUrl());\n";
     
     for (var i = 0; i < testSuite.tests.length; ++i) {
         var testClass = testSuite.tests[i].getTitle();
         var testClassVariable = testClass.toLowerCase();
         
-        formattedSuite += indents(3) + testClassVariable + ".setSelenium(selenium)" + ";\n";
+        formattedSuite += indents(2) + testClassVariable + ".setSelenium(selenium)" + ";\n";
     }
     
-    formattedSuite += indents(2) + "}\n";
+    formattedSuite += indents(1) + "}\n";
     
-    formattedSuite += indents(2) +"@Test\n"
-    	+ indents(2) +"@Title(\"" + suiteClass + "\")\n"
-    	+ indents(2) +"public void test() throws Exception {\n";
+    formattedSuite += indents(1) +"@Test\n"
+    	+ indents(1) +"@Title(\"" + suiteClass + "\")\n"
+    	+ indents(1) +"public void test() throws Exception {\n";
     
     for (var i = 0; i < testSuite.tests.length; ++i) {
         var testClass = testSuite.tests[i].getTitle();
         var testClassVariable = testClass.toLowerCase();
         
-        formattedSuite += indents(3) + testClassVariable + ".step" + testClass + "();\n";
+        formattedSuite += indents(2) + testClassVariable + ".step" + testClass + "();\n";
     }
     
     	
-    formattedSuite += indents(2) + "}\n"
-    	+ indents(1)+ "}\n";
+    formattedSuite += indents(1) + "}\n"
+    	+  "}\n";
    
     return formattedSuite;
 }
@@ -281,7 +281,9 @@ options.header =
     "\n" +
     indents(1) + "public ${className}(Pages pages) {\n" +
     indents(2) + "super(pages);\n" +
-    indents(1) + "}\n" +    
+    indents(1) + "}\n" +   
+    "\n" +
+    indents(1) + "private Selenium selenium;\n" +
     "\n" +
     indents(1) + "@Step(\"${testName}\")\n" +
     indents(1) + "public void ${methodName}() throws Exception {\n";
@@ -289,6 +291,13 @@ options.header =
 options.footer =
     indents(1) + "}\n" +
     "\n" +
+    indents(1) + "public void setSelenium(Selenium selenium) {\n" +
+    indents(2) + "this.selenium = selenium;\n" +
+    indents(1) + "}\n" +
+    "\n" +
+    
+    
+    
     "}\n";
 
 this.configForm = 
