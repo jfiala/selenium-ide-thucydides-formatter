@@ -2,13 +2,13 @@
 <RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
  xmlns:em="http://www.mozilla.org/2004/em-rdf#">
     <Description about="urn:mozilla:install-manifest">
-        <em:id>thucydidesformatters@fwd.at</em:id>
+        <em:id>thucydidesformatters@github.com</em:id>
         <em:name>Selenium IDE: Thucydides Formatters</em:name>
         <em:version>1.0.0</em:version>
         <em:creator>Johannes Fiala</em:creator>
         <em:description>Thucydides Java code formatters for Selenium IDE</em:description>
         <em:type>2</em:type>
-        <em:homepageURL>http://www.fwd.at</em:homepageURL>
+        <em:homepageURL>https://github.com/jfiala/selenium-ide-thucydides-formatter</em:homepageURL>
 
         <em:targetApplication>
           <Description>
