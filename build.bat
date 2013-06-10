@@ -2,7 +2,7 @@
  
 setlocal
  
-set APP_NAME="thucydides-formatters"
+set APP_NAME="selenium-ide-thucydides-formatter"
 set CHROME_PROVIDERS="content"
  
 set ZIP_APP="c:\program files (x86)\7-zip\7z.exe"
