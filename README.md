@@ -15,6 +15,9 @@ To see how the Thucydides report looks like, see the [sample report][3] provided
 1. Run build.bat.
 2. Open webdriver-backed-formatters.xpi in Firefox.
 
+## Credits
+Adam Goucher - Author of the Selenium IDE plugin API 
+
 [1]:http://seleniumhq.org/projects/ide/
 [2]:http://www.thucydides.info/
 [3]:https://github.com/jfiala/selenium-ide-thucydides-formatter/blob/master/sample/thucydides-report/thucydides-report.zip
