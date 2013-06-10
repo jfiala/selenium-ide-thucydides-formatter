@@ -27,7 +27,7 @@ public class Download extends ScenarioSteps {
 		selenium.open("/");
 		selenium.click("link=Download");
 		selenium.waitForPageToLoad("30000");
-		verifyTrue(selenium.isTextPresent("Downloads"));
+		assertTrue(selenium.isTextPresent("Downloads"));
 	}
 
 	public void setSelenium(Selenium selenium) {

@@ -15,9 +15,9 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriverBackedSelenium;
-import com.example.steps.Search;
-import com.example.steps.Download;
-import com.example.steps.Documentation;
+import at.fwd.sample.steps.Search;
+import at.fwd.sample.steps.Download;
+import at.fwd.sample.steps.Documentation;
 
 @RunWith(ThucydidesRunner.class)
 public class Suite {

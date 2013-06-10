@@ -27,7 +27,7 @@ public class Documentation extends ScenarioSteps {
 		selenium.open("/download/");
 		selenium.click("link=Documentation");
 		selenium.waitForPageToLoad("30000");
-		verifyTrue(selenium.isTextPresent("Selenium Documentation"));
+		assertTrue(selenium.isTextPresent("Selenium Documentation"));
 	}
 
 	public void setSelenium(Selenium selenium) {
